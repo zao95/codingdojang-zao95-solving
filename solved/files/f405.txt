@@ -1,0 +1,3 @@
+test file
+	This is tab.
+    This is 4 space bar.
