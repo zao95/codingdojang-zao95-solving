@@ -1,4 +1,5 @@
-# 코딩도장 자작 문제풀이
+# 자작 문제풀이
+# Question number. 001
 
 # Author: Lee Jeongwoo
 # Github name: zao95
@@ -14,4 +15,4 @@ ans1 = max([x for x in range(1, max(num1, num2)) if num1 % x == 0 and num2 % x =
 ans2 = int((num1 * num2) / ans1)
 
 print("최대공약수: {ans}".format(ans = ans1))
-print("최소공배수: {ans}".format(ans = ans2))
+print("최소공배수: {ans}".format(ans = ans2)) 
