@@ -136,3 +136,36 @@ class Sort:
             print("차이 내용")
             print(insertion_list_1)
             print(self.right_answer)
+
+
+    # insertion sort #2 sort
+    # temp 변수를 통한 변수값 교환
+    def insertion_2(self):
+        # copy random list
+        insertion_list_2 = copy.deepcopy(self.mother_list)
+        # start timewatch
+        insertion_starttime = time.time()
+        # count reset
+        change_count = 0
+        # sort
+        for i in range(0, len(insertion_list_2)):
+            while 0 < i and insertion_list_2[i] < insertion_list_2[i - 1]:
+                temp = insertion_list_2[i]
+                insertion_list_2[i] = insertion_list_2[i - 1]
+                insertion_list_2[i - 1] = temp
+                i -= 1
+                change_count += 1
+        # end timewatch
+        insertion_endtime = time.time()
+        # insertion #1 result
+        print("==========")
+        print("삽입정렬 #2 완료")
+        print("소요시간 {time}초".format(time = insertion_endtime - insertion_starttime))
+        if(insertion_list_2 == self.right_answer):
+            print("정상작동 확인")
+            print("교체 횟수: {times}회".format(times = change_count))
+        else:
+            print("정상작동 실패")
+            print("차이 내용")
+            print(insertion_list_2)
+            print(self.right_answer)
