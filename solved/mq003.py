@@ -7,3 +7,11 @@
 # ========== Question ==========
 # python-packer를 이용하여 실행파일 제작
 # ==============================
+
+def abc():
+    print("a")
+
+abc()
+
+print(hex(id(abc())))
+print(hex(id("abc")))

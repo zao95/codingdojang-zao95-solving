@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        class PersonClass {
+            // PersonType 생성자와 동일합니다.
+            a = 5;
+            constructor(name) {
+                this.name = name;
+            }
+            sayName() {
+                alert(this.name);
+            }
+        }
+        class Persons extends PersonClass {
+            constructor() {
+                b = super.a;
+                super.sayName();
+            }
+            abc() {
+                alert(b);
+            }
+        }
+        let person = new PersonClass("Nicholas");
+        let persons = new Persons();
+        person.sayName();   // outputs "Nicholas"
+        Persons.abc();
+        console.log(person instanceof PersonClass);     // true
+        console.log(person instanceof Object);          // true
+        console.log(typeof PersonClass);                    // "function"
+        console.log(typeof PersonClass.prototype.sayName);  // "function"
+    </script>
+    <p id="a"></p>
+</body>
+</html>
